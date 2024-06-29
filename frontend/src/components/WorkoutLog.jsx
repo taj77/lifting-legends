@@ -19,7 +19,7 @@ const WorkoutLog = ({ username }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('/log-workout', { username, workout })
+    axios.post('http://localhost:3000/log-workout', { username, workout })
       .then(response => {
         alert('Workout logged');
       })

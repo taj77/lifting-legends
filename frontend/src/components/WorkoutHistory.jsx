@@ -6,7 +6,7 @@ const WorkoutHistory = ({ username }) => {
   const [workouts, setWorkouts] = useState([]);
 
   useEffect(() => {
-    axios.get(`/workout-history/${username}`)
+    axios.get(`http://localhost:3000/workout-history/${username}`)
       .then(response => {
         setWorkouts(response.data);
       })
