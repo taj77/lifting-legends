@@ -81,15 +81,6 @@ app.post('/log-workout', async (req, res) => {
 app.get('/workout-history/:username', async (req, res) => {
   const { username } = req.params;
 
-  // Simulate fetching workout data from a database or other source
-  const workouts = [
-    { exercise: 'Squats', weight: 100, duration: '30 mins', calories: 200 },
-    { exercise: 'Bench Press', weight: 80, duration: '20 mins', calories: 150 },
-    // Add more workout data as needed
-  ];
-
-  res.json(workouts); // Ensure the response is JSON and is an array
-
   try {
     const workouts = await client.lRange(`workout:${username}`, 0, -1);
     res.status(200).send(workouts.map(JSON.parse));
