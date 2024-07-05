@@ -1,8 +1,6 @@
-// src/components/UserLogin.js
 import React, { useState } from 'react';
-import axios from 'axios';
 
-const UserLogin = ({ setUsername }) => {
+const UserLogin = ({ handleLogin }) => {
   const [formData, setFormData] = useState({
     username: '',
     password: ''
@@ -17,14 +15,8 @@ const UserLogin = ({ setUsername }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:3000/login', formData)
-      .then(response => {
-        alert('Login successful');
-        setUsername(formData.username);
-      })
-      .catch(error => {
-        alert('Error logging in');
-      });
+    // Simulate login
+    handleLogin(formData.username);
   };
 
   return (

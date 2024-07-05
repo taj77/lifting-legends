@@ -1,6 +1,4 @@
-// src/components/WorkoutLog.js
 import React, { useState } from 'react';
-import axios from 'axios';
 
 const WorkoutLog = ({ username }) => {
   const [workout, setWorkout] = useState({
@@ -19,13 +17,8 @@ const WorkoutLog = ({ username }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:3000/log-workout', { username, workout })
-      .then(response => {
-        alert('Workout logged');
-      })
-      .catch(error => {
-        alert('Error logging workout');
-      });
+    // Simulate logging a workout
+    console.log(`Workout logged for ${username}:`, workout);
   };
 
   return (

@@ -1,8 +1,6 @@
-// src/components/UserRegistration.js
 import React, { useState } from 'react';
-import axios from 'axios';
 
-const UserRegistration = () => {
+const UserRegistration = ({ handleLogin }) => {
   const [formData, setFormData] = useState({
     username: '',
     password: '',
@@ -20,13 +18,8 @@ const UserRegistration = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:3000/register', formData)
-      .then(response => {
-        alert('User registered');
-      })
-      .catch(error => {
-        alert('Error registering user');
-      });
+    // Simulate registration and login
+    handleLogin(formData.username);
   };
 
   return (
