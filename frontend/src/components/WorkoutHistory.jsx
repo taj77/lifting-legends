@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 const WorkoutHistory = ({ username }) => {
   const [workouts, setWorkouts] = useState([]);
@@ -8,10 +8,12 @@ const WorkoutHistory = ({ username }) => {
   useEffect(() => {
     const fetchWorkouts = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/workout-history/${username}`);
+        const response = await axios.get(
+          `http://localhost:3000/workout-history/${username}`
+        );
         setWorkouts(response.data);
       } catch (err) {
-        console.error('Failed to fetch workout history:', err);
+        console.error("Failed to fetch workout history:", err);
         setError(err.message);
       }
     };
@@ -29,7 +31,8 @@ const WorkoutHistory = ({ username }) => {
       <ul>
         {workouts.map((workout, index) => (
           <li key={index}>
-            Exercise: {workout.exercise}, Weight: {workout.weight}, Duration: {workout.duration}, Calories: {workout.calories}
+            Name: {workout.Name}, Target: {workout.Target}, Equipment:{" "}
+            {workout.Equipment}, Calories: {workout.calories}
           </li>
         ))}
       </ul>

@@ -34,8 +34,8 @@ const GroupProgress = ({ groupName }) => {
       <ul>
         {progress.map((entry, index) => (
           <li key={index}>
-            User: {entry.username}, Exercise: {entry.workout.exercise}, Weight:{" "}
-            {entry.workout.weight}, Duration: {entry.workout.duration},
+            User: {entry.username}, Name: {entry.workout.Name}, Target:{" "}
+            {entry.workout.Target}, Equipment: {entry.workout.Equipment},
             Calories: {entry.workout.calories}
           </li>
         ))}

@@ -5,9 +5,9 @@ import axios from "axios";
 const ShareProgress = ({ username, setGroupName }) => {
   const [localGroupName, setLocalGroupName] = useState("");
   const [workout, setWorkout] = useState({
-    exercise: "",
-    weight: "",
-    duration: "",
+    Name: "",
+    Target: "",
+    Equipment: "",
     calories: "",
   });
 
@@ -51,21 +51,21 @@ const ShareProgress = ({ username, setGroupName }) => {
       />
       <input
         type="text"
-        name="exercise"
-        placeholder="Exercise"
+        name="Name"
+        placeholder="Name"
         onChange={handleChange}
         required
       />
       <input
         type="text"
-        name="weight"
-        placeholder="Weight"
+        name="Target"
+        placeholder="Target"
         onChange={handleChange}
       />
       <input
         type="text"
-        name="duration"
-        placeholder="Duration"
+        name="Equipment"
+        placeholder="Equipment"
         onChange={handleChange}
       />
       <input
