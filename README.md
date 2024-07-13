@@ -11,6 +11,20 @@
 - **Install Git:**
   - If you haven't already, install Git from [git-scm.com](https://git-scm.com/).
 
+- **Languages Used:**
+  - **JavaScript:** Primary language for both backend (Node.js) and frontend (React).
+  - **HTML:** Markup language for structuring the frontend.
+  - **CSS:** Styling language for designing the frontend.
+
+- **Libraries and Tools Used:**
+  - **Node.js:** JavaScript runtime [nodejs.org](https://nodejs.org/)
+  - **Express:** Web framework for Node.js [expressjs.com](https://expressjs.com/)
+  - **Redis:** In-memory data structure store [redis.io](https://redis.io/)
+  - **Axios:** Promise-based HTTP client [axios-http.com](https://axios-http.com/)
+  - **React:** JavaScript library for building user interfaces [reactjs.org](https://reactjs.org/)
+  - **dotenv:** Module to load environment variables [npmjs.com/package/dotenv](https://www.npmjs.com/package/dotenv)
+
+
 ## Step 2: Clone the Project Repository
 
 - **Clone the repository and navigate to the project directory:**
